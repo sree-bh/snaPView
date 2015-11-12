@@ -1,0 +1,26 @@
+* {
+	font-family: sans-serif;
+}
+body {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin: 0;
+	background: #aaccaa;
+}
+
+h3 {
+	top: 5px;
+	min-width: 200px;
+	margin: 0;
+	text-align: center;
+	color: #eeeeee;
+	font-size: 30px;
+}
+footer {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	color: #eeeeee;
+}
