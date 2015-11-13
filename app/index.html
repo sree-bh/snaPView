@@ -12,8 +12,10 @@
 		<h3>snaPView</h3>
 	</header>
 	<section class="flex-item">
-	    <!-- <button ng-click="snapCtrl.slideShow()">Slide Show</button> -->
-	    Click on the image to change it.
+	    <button ng-click="snapCtrl.slideShow()">
+	    	Slide Show {{snapCtrl.action}}
+	    </button>
+	    <i>&nbsp;Also, you can click on the image to change it.</i>
 	    <snap-viewer ng-repeat="item in snapCtrl.snapList track by $index"
 	        class="slide-container {{item.cls}}"></snap-viewer>
 	</section>

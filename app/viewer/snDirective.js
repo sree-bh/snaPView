@@ -46,6 +46,7 @@ define('snDir', ['angular'], function (ng) {
 	    			snapList[scope.$index].cls = 'left';
 	    			snapList[nextIdx].cls = 'shown';
 	    			scope.$parent.animationProgress = false;
+	    			scope.$parent.currentIdx = scope.$index;
 	    		}, 3500);
 
 	    		scope.$apply();
