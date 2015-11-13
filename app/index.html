@@ -7,13 +7,16 @@
 	<script data-main="main" src="../node_modules/requirejs/require.js"></script>
 	<title>snaPView</title>
 </head>
-<body ng-app="snView">
-	<header>
+<body class="flex-container" data-ng-app="snView" data-ng-controller="snController as snapCtrl">
+	<header class="flex-item">
 		<h3>snaPView</h3>
 	</header>
-	<section>
-	    slide coming soon!!
+	<section class="flex-item">
+	    <!-- <button ng-click="snapCtrl.slideShow()">Slide Show</button> -->
+	    Click on the image to change it.
+	    <snap-viewer ng-repeat="item in snapCtrl.snapList track by $index"
+	        class="slide-container {{item.cls}}"></snap-viewer>
 	</section>
-	<footer>© sb-2015</footer>
+	<footer class="flex-item">© sb-2015</footer>
 </body>
 </html>
