@@ -12,19 +12,7 @@
 		<h3>snaPView</h3>
 	</header>
 	<section class="flex-item">
-		<div class="controls">
-	        <button ng-click="snapCtrl.prev()">
-		    	&lt;
-		    </button>
-		    <button ng-click="snapCtrl.slideShow()">
-		    	Slide Show {{snapCtrl.action}}
-		    </button>
-		    <button ng-click="snapCtrl.next()">
-		    	&gt;
-		    </button>
-		</div>
-	    <div snap-viewer ng-repeat="item in snapCtrl.snapList track by $index"
-	        class="slide-container {{item.cls}}"></div>
+	    <div data-snap-viewer data-sn-data="snapCtrl.snapList"></div>
 	</section>
 	<footer class="flex-item">© sb-2015</footer>
 </body>
