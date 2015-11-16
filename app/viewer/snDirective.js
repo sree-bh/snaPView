@@ -9,48 +9,12 @@ define('snDir', ['angular'], function (ng) {
 		var directive = {
 	        link: link,
 	        template: '<div style="background-image: url({{item.path}});" class="slide"></div>',
-	        restrict: 'EC'
+	        restrict: 'EAC'
 	    };
 
 		return directive;
 
 	    function link(scope, el, attrs) {
-	    	var snapList = scope.$parent.snapCtrl.snapList;
-
-	    	scope.$parent.animationProgress = false;
-
-	    	if (scope.$first) {
-	    		snapList[scope.$index].cls = 'shown';
-	    	}
-
-	    	el.bind('click', function() {
-	    		var nextIdx = scope.$index + 1;
-
-	    		if (scope.$parent.animationProgress) {
-	    			return;
-	    		}
-
-	    		scope.$parent.animationProgress = true;
-
-	    		if (scope.$last) {
-	    			ng.forEach(snapList, function(item, idx) {
-    					item.cls = '';
-	    			});
-
-	    			nextIdx = 0;
-		    	}
-
-	    		snapList[scope.$index].cls = 'shown left';
-	    		snapList[nextIdx].cls = 'next';
-	    		$timeout(function () {
-	    			snapList[scope.$index].cls = 'left';
-	    			snapList[nextIdx].cls = 'shown';
-	    			scope.$parent.animationProgress = false;
-	    			scope.$parent.currentIdx = scope.$index;
-	    		}, 3500);
-
-	    		scope.$apply();
-	    	});
 	    }
 	}
 });

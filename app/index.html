@@ -12,12 +12,19 @@
 		<h3>snaPView</h3>
 	</header>
 	<section class="flex-item">
-	    <button ng-click="snapCtrl.slideShow()">
-	    	Slide Show {{snapCtrl.action}}
-	    </button>
-	    <i>&nbsp;Also, you can click on the image to change it.</i>
-	    <snap-viewer ng-repeat="item in snapCtrl.snapList track by $index"
-	        class="slide-container {{item.cls}}"></snap-viewer>
+		<div class="controls">
+	        <button ng-click="snapCtrl.prev()">
+		    	&lt;
+		    </button>
+		    <button ng-click="snapCtrl.slideShow()">
+		    	Slide Show {{snapCtrl.action}}
+		    </button>
+		    <button ng-click="snapCtrl.next()">
+		    	&gt;
+		    </button>
+		</div>
+	    <div snap-viewer ng-repeat="item in snapCtrl.snapList track by $index"
+	        class="slide-container {{item.cls}}"></div>
 	</section>
 	<footer class="flex-item">© sb-2015</footer>
 </body>
