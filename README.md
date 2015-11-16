@@ -2,7 +2,7 @@
 
 Hi, this is Sree. I am a front end developer based in India.
 
-This is an image viewer application.
+This is an image viewer application using angularjs.
 
 Pre-requisites:
 1. nodejs should be installed.
